@@ -5,8 +5,3 @@ class Content(models.Model):
     content_post_date = models.DateTimeField('date published')
     content = models.TextField()
     # TODO add tags, Haystack and Whoosh to handle search of content and tags
-    
-class Comment(models.Model):
-    content = models.ForeignKey(Content)
-    comment_post_date = models.DateTimeField('date published')
-    comment = models.TextField()
