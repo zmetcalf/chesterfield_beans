@@ -16,9 +16,9 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-SESSION_COOKIE_SECURE = True
-
-CSRF_COOKIE_SECURE = True
+# Turn these on for SSL - Default = False
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
