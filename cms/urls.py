@@ -1,8 +1,7 @@
 from django.conf.urls import patterns, url
 
-from cms import views
+from cms.views import show_content
 
 urlpatterns = patterns('',
-    # url(r'^$', views.IndexView.as_view(), name = 'index'),   
-    url(r'^(?P<poll_id>\d+)/content/$', views.content, name = 'content'),
+        url(r'^(?P<content_id>\d+)/$', show_content, name='content'),
 )
