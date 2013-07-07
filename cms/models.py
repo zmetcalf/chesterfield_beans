@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 
 class Content(models.Model):
@@ -5,4 +6,5 @@ class Content(models.Model):
     content_post_date = models.DateTimeField('date published')
     content = models.TextField()
     summary = models.TextField()
+    author = models.ForeignKey(User)
     # TODO add tags, Haystack and Whoosh to handle search of content and tags

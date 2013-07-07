@@ -1,4 +1,5 @@
 from django.contrib import admin
+
 from cms.models import Content
 
 class ContentAdmin(admin.ModelAdmin):
