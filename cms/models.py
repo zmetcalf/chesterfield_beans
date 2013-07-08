@@ -9,3 +9,6 @@ class Content(models.Model):
     summary = models.TextField()
     author = models.ForeignKey(User, null=True, blank=True)
     # TODO add tags, Haystack and Whoosh to handle search of content and tags
+    
+    def __unicode__(self):
+        return self.title
