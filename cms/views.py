@@ -7,6 +7,8 @@ def show_content(request, content_id):
     content = content_object.content
     post_date_time = content_object.content_post_date
     title = content_object.title
+    author = content_object.author.get_full_name()
     
     return render(request, 'cms/content.html', {'content': content, 
-                    'post_date_time': post_date_time, 'title': title})
+                    'author': author, 'post_date_time': post_date_time,
+                    'title': title})

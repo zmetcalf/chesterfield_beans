@@ -1,5 +1,11 @@
+{% include 'header.html' with head_title=title %}
+
 <div class="content-title">{{ title }}</div>
 
 <div class="content-body">{{ content }}</div>
 
-<div class="author">{{ author }}</div> <div class="date-time">{{ post_date_time }}</div>
+<div class="author">{{ author }}</div>
+
+<div class="date-time">{{ post_date_time }}</div>
+
+{% include 'footer.html' %}
