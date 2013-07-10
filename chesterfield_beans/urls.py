@@ -1,6 +1,5 @@
 from django.conf.urls import patterns, include, url
 from site_management.views import base
-from cms.views import show_content
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -17,6 +16,5 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
     url(r'^', include('site_management.urls', namespace="manager")),
-    #url(r'^content/', include('cms.urls', namespace = "content")),
-    #(r'^comments/', include('django.contrib.comments.urls')),
+    # (r'^comments/', include('django.contrib.comments.urls')),
 )

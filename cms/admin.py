@@ -11,6 +11,7 @@ class ContentAdmin(admin.ModelAdmin):
             obj.author = request.user
         if getattr(obj, 'content_post_date', None) is None:
             obj.content_post_date = timezone.now()
+        # TODO add auto-meta/seo maker
         obj.save()
-
+        
 admin.site.register(Content, ContentAdmin)
