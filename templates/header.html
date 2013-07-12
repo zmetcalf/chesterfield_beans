@@ -8,9 +8,15 @@
     
     <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
     <link rel="stylesheet" type="text/css" href="{% static "css/base.css" %}"/>
+    {% if site_mode == "cms" %}
+        <!-- Imports for CMS -->
+        <link rel="stylesheet" type="text/css" href="{% static "cms/css/cms.css" %}"/>
+    {% endif %}
 </head>
 <body>
 <header>
-
+    <!--TODO Insert If statement if site logo is available -->
+    <h1>{{site_title}}</h1>
+    <h4>{{site_slogan}}</h4>
+    {% include "menu-main.html" %}
 </header>
-
