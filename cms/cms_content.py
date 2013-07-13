@@ -14,3 +14,8 @@ def get_content(content_id):
     return {'content': content, 'author': author, 'post_date_time': 
             post_date_time, 'title': title, 'meta_keywords': meta_keywords,
             'meta_description': meta_description}
+            
+def get_recent():
+    list = []
+    
+    return list

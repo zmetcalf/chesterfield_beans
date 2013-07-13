@@ -4,10 +4,6 @@ from django.template import Context
 from cms import cms_content
 from site_management.models import SiteVariable
 
-def base(request):
-    title = get_object_or_404(SiteVariable, option_name__exact='Site Name')
-    return render(request, 'base.html', {'title': title})
-
 def show_cms(request, content_id):
     site_title = get_object_or_404(SiteVariable, option_name__exact='Site Name')
     site_slogan = get_object_or_404(SiteVariable, option_name__exact='Site Slogan')

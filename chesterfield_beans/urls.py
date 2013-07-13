@@ -1,5 +1,4 @@
 from django.conf.urls import patterns, include, url
-from site_management.views import base
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin

@@ -14,9 +14,14 @@
     {% endif %}
 </head>
 <body>
+<div id="container">
 <header>
     <!--TODO Insert If statement if site logo is available -->
     <h1>{{site_title}}</h1>
     <h4>{{site_slogan}}</h4>
     {% include "menu-main.html" %}
 </header>
+{% if sidebar == "left" %}
+    <!-- Import Sidebar Left -->
+    {% include "sidebar.html" %}
+{% endif %}
