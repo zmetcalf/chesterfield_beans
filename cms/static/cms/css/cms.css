@@ -1,6 +1,8 @@
 article {
+    float:left;
     background-color: white;
-    max-width: 540px;
-    margin: 20px auto;
-    padding: 20px 40px;
+    
+    width:68%;
+    margin: 1%;
+    padding: 1% 2%;
 }

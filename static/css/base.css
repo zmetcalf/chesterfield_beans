@@ -2,10 +2,23 @@ body {
     background-color: #FF3333;
 }
 
+#container {
+    margin: 0 auto;
+    padding:10px 40px;
+    max-width: 960px;
+}
+
 header {
     background-color: white;
-    padding: 10px 40px;
+    padding: 20px 40px;
+    margin:1%;
     font-family: "Tahoma";
-    margin: 0 auto;
-    max-width: 900px;
+}
+
+aside {
+    float:left;
+    margin:1%;
+    padding: 1% 2%;
+    background-color: white;
+    width:20%;
 }
