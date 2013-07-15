@@ -1,0 +1,17 @@
+{% include 'header.html' with site_title=site_title title="Blog Title" %} 
+{% if blogroll %}
+    {% for blog_entry in blogroll %}
+        <article>
+            <div class="blog-title">{{ blog_entry.entry_title }}</div>
+            
+            <div class="blog-body">{{ blog_entry.entry }}</div>
+            
+            <div class="author">{{ blog_entry.author }}</div>
+            
+            <div class="date-time">{{ blog_entry.entry_post_date }}</div>
+        </article>
+    {% endfor %}
+{% else %}
+    <p>No Blog Entries</p>
+{% endif %}
+{% include 'footer.html' %}

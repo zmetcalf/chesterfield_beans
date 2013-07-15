@@ -3,6 +3,7 @@ from django.shortcuts import get_object_or_404
 from cms.models import Content
 
 def get_content(content_id):
+    # TODO Possible reduction of code by passing content object in return
     content_object = get_object_or_404(Content, pk = content_id)
     content = content_object.content
     post_date_time = content_object.content_post_date
