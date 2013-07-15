@@ -8,7 +8,9 @@ def show_cms(request, content_id):
     site_title = get_object_or_404(SiteVariable, option_name__exact='Site Name')
     site_slogan = get_object_or_404(SiteVariable, option_name__exact='Site Slogan')
     content = cms_content.get_content(content_id)
+    sidebar = cms_content.get_recent()
     header = {'site_title': site_title, 'site_slogan': site_slogan,
-                'site_mode': "cms"}
-    to_view =  Context(dict(list(content.items()) + list(header.items())))
+                'site_mode': 'cms', 'sidebar': 'left'}
+    to_view =  Context(dict(list(content.items()) + list(header.items() + 
+                            list(sidebar.items()))))
     return render(request, 'cms/content.html', to_view)

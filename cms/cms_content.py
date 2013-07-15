@@ -16,6 +16,5 @@ def get_content(content_id):
             'meta_description': meta_description}
             
 def get_recent():
-    list = []
-    
-    return list
+    latest_content_list = Content.objects.all().order_by("-content_post_date")[:5]
+    return {'latest_content_list': latest_content_list}
