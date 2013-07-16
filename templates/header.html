@@ -11,6 +11,9 @@
     {% if site_mode == "cms" %}
         <!-- Imports for CMS -->
         <link rel="stylesheet" type="text/css" href="{% static "cms/css/cms.css" %}"/>
+    {% elif site_mode == "blog" %}
+        <!-- Imports for Blog -->
+        <link rel="stylesheet" type="text/css" href="{% static "blog/css/blog.css" %}"/>
     {% endif %}
 </head>
 <body>
