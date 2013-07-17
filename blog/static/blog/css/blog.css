@@ -1,7 +1,11 @@
-article {
+#content {
     float:left;
-    background-color: white;
-    width:68%;
+    width:73.5%;
+    margin:.25%;
+
+}
+article {
     margin: 1%;
     padding: 1% 2%;
+    background-color: white;
 }
