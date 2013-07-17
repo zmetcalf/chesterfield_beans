@@ -1,4 +1,4 @@
-{% include 'header.html' with site_title=site_title title="Blog Title" %} 
+{% include 'header.html' with site_title=site_title title=content.title meta_keywords=content.seo_keywords meta_description=content.seo_description %} 
 <div id="content">
 {% if blogroll %}
     {% for blog_entry in blogroll %}

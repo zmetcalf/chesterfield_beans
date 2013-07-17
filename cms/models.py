@@ -15,3 +15,8 @@ class Content(models.Model):
     
     def __unicode__(self):
         return self.title
+        
+def user_unicode_patch(self):
+    return '%s %s' % (self.first_name, self.last_name)
+
+User.__unicode__ = user_unicode_patch

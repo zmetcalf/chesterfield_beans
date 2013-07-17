@@ -1,0 +1,13 @@
+{% include 'header.html' with site_title=site_title title=content.title meta_keywords=content.seo_keywords meta_description=content.seo_description %} 
+<div id="content">
+    <article>
+        <div class="blog-title">{{ entry.entry_title }}</div>
+        
+        <div class="blog-body">{{ entry.entry }}</div>
+        
+        <div class="author">{{ entry.author }}</div>
+        
+        <div class="date-time">{{ entry.entry_post_date }}</div>
+    </article>
+</div>
+{% include 'footer.html' %}

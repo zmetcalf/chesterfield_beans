@@ -1,11 +1,11 @@
-{% include 'header.html' with site_title=site_title title=title %} 
+{% include 'header.html' with site_title=site_title title=content.title meta_keywords=content.seo_keywords meta_description=content.seo_description %} 
 <article>
-    <div class="content-title">{{ title }}</div>
+    <div class="content-title">{{ content.title }}</div>
     
-    <div class="content-body">{{ content }}</div>
+    <div class="content-body">{{ content.content }}</div>
     
-    <div class="author">{{ author }}</div>
+    <div class="author">{{ content.author }}</div>
     
-    <div class="date-time">{{ post_date_time }}</div>
+    <div class="date-time">{{ content.content_post_date }}</div>
 </article>
 {% include 'footer.html' %}
