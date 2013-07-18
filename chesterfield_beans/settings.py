@@ -126,6 +126,7 @@ INSTALLED_APPS = (
     'site_management',
     'cms',
     'blog',
+    'south', # http://south.aeracode.org/ - database migration - easy_install south==0.8.1
 )
 
 # A sample logging configuration. The only tangible logging
