@@ -119,7 +119,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.static",
     "django.core.context_processors.tz",
     "django.contrib.messages.context_processors.messages",
-    "chesterfield_beans.global_context_processors.global_context",
+    "chesterfield_beans.context_processors.global_context",
 )
 
 INSTALLED_APPS = (
