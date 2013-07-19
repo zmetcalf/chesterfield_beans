@@ -8,7 +8,7 @@ from cms.models import Content
 def show_cms(request, content_id):
     content = content = get_object_or_404(Content, pk = content_id)
     sidebar = blog_entry.get_recent(5)
-    site_info = {'sidebar': 'left', 'content': content}
+    site_info = {'content': content}
     to_view =  Context(dict(list(site_info.items() + list(sidebar.items()))))
     return render(request, 'cms/content.html', to_view, context_instance = 
                     RequestContext(request, processors=[context_processors]))

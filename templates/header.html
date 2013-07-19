@@ -24,7 +24,7 @@
     <h4>{{SITE_SLOGAN}}</h4>
     {% include "menu-main.html" %}
 </header>
-{% if sidebar == "left" %}
+{% if not content.sidebar_right %}
     <!-- Import Sidebar Left -->
     {% include "sidebar.html" %}
 {% endif %}

@@ -3,13 +3,12 @@
 {% if blogroll %}
     {% for blog_entry in blogroll %}
         <article>
-            <div class="blog-title">{{ blog_entry.entry_title }}</div>
-            
-            <div class="blog-body">{{ blog_entry.entry }}</div>
-            
-            <div class="author">{{ blog_entry.author }}</div>
-            
-            <div class="date-time">{{ blog_entry.entry_post_date }}</div>
+            <div id="blog-title">{{ blog_entry.entry_title }}</div>
+            <div id="blog-body">{{ blog_entry.entry }}</div>
+        <div id = "author-date">
+            <div id="author">{{ blog_entry.author }}</div>
+            <div id="date-time">{{ blog_entry.entry_post_date }}</div>
+        </div>
         </article>
     {% endfor %}
 {% else %}

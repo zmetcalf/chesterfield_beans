@@ -10,8 +10,8 @@ class Content(models.Model):
     author = models.ForeignKey(User, null=True, blank=True)
     seo_keywords = models.CharField(max_length=160, null=True, blank=True)
     seo_description = models.CharField(max_length=160, null=True, blank=True)
+    sidebar_right =models.BooleanField()
     # TODO add tags, Haystack and Whoosh to handle search of content and tags
-    # TODO add left/right sidebar
     
     def __unicode__(self):
         return self.title

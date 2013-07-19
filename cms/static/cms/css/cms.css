@@ -1,7 +1,32 @@
-article {
+#content {
     float:left;
-    background-color: white;
-    width:68%;
-    margin: 1%;
+    width:70%;
+    margin:.25%;
+
+}
+article {
+    font-family: "Tahoma";
+    margin: 3%;
     padding: 1% 2%;
+    background-color: white;
+    box-shadow: 10px 10px 5px #201F1F;
+}
+#blog-title {
+    font-size:20px;
+    font:bold;
+    margin:1%;
+}
+
+#blog-body {
+    margin-left:2%;
+}
+#author-date {
+    margin:1%;
+}
+
+#author, #date-time {
+    font-size:12px;
+}
+#author {
+    color:blue;
 }

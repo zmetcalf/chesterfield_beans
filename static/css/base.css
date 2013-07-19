@@ -13,6 +13,7 @@ header {
     padding: 20px 40px;
     margin:1%;
     font-family: "Tahoma";
+    box-shadow: 10px 10px 5px #201F1F;
 }
 
 aside {
@@ -21,4 +22,5 @@ aside {
     padding: 1% 2%;
     background-color: white;
     width:20%;
+    box-shadow: 10px 10px 5px #201F1F;
 }

@@ -1,13 +1,12 @@
 {% include 'header.html' with title=entry.entry_title meta_keywords=entry.seo_keywords meta_description=entry.seo_description %} 
 <div id="content">
     <article>
-        <div class="blog-title">{{ entry.entry_title }}</div>
-        
-        <div class="blog-body">{{ entry.entry }}</div>
-        
-        <div class="author">{{ entry.author }}</div>
-        
-        <div class="date-time">{{ entry.entry_post_date }}</div>
+        <div id="blog-title">{{ entry.entry_title }}</div>
+        <div id="blog-body">{{ entry.entry }}</div>
+        <div id = "author-date">
+            <div id="author">{{ entry.author }}</div>
+            <div id="date-time">{{ entry.entry_post_date }}</div>
+        </div>
     </article>
 </div>
 {% include 'footer.html' %}

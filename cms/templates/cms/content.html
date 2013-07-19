@@ -1,11 +1,12 @@
 {% include 'header.html' with title=content.title meta_keywords=content.seo_keywords meta_description=content.seo_description %} 
+<div id="content">
 <article>
-    <div class="content-title">{{ content.title }}</div>
-    
-    <div class="content-body">{{ content.content }}</div>
-    
-    <div class="author">{{ content.author }}</div>
-    
-    <div class="date-time">{{ content.content_post_date }}</div>
+    <div id="content-title">{{ content.title }}</div>
+    <div id="content-body">{{ content.content }}</div>
+    <dif id="author-date">
+        <div id="author">{{ content.author }}</div>
+        <div id="date-time">{{ content.content_post_date }}</div>
+    </div>
 </article>
+</div>
 {% include 'footer.html' %}
