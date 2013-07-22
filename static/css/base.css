@@ -16,6 +16,11 @@ header {
     box-shadow: 10px 10px 5px #201F1F;
 }
 
+#nav-home {
+    float:left;
+    margin: 0 2%;
+}
+
 aside {
     float:left;
     margin:1%;

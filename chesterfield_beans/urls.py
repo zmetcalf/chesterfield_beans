@@ -20,7 +20,6 @@ urlpatterns = patterns('',
     url(r'^blog/(?P<slug>[a-zA-Z0-9_.-]+)/$', show_blogroll, name='blog'),
     url(r'^blog-entry/(?P<entry_id>\d+)/$', show_blog_entry,
         name='blog_entry'),
-    url(r'^$', get_home, name='home'),
-    # url(r'^', include('site_management.urls', namespace="manager")),
-    # (r'^comments/', include('django.contrib.comments.urls')),
+    url(r'^$', get_home, name='home'), # Add/remove $ after ^ if 404 instead of homepage
+    (r'^comments/', include('django.contrib.comments.urls')),
 )
