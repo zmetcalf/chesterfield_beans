@@ -4,11 +4,10 @@ from django.template import Context, RequestContext
 from blog import blog_entry
 from blog.models import BlogInfo, BlogEntry
 
-def show_blogroll(request, blog_id):
-    # TODO set blog_id to human readable
-    blog = get_object_or_404(BlogInfo, pk = blog_id)
+def show_blogroll(request, slug):
+    blog = get_object_or_404(BlogInfo, url_slug = slug)
     blogroll = blog.blogentry_set.all().order_by("-entry_post_date")[:10]
-    title = blog_entry.get_blog_info_title(blog_id)
+    title = blog_entry.get_blog_info_title(slug)
     sidebar = blog_entry.get_recent(5)
     site_info = {'sidebar': 'left', 'blogroll': blogroll}
     to_view = Context(dict(list(title.items()) + list(site_info.items()) + 

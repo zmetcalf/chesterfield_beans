@@ -10,7 +10,7 @@
 <h4>Recent Blog Entries</h4>
     <ul>
     {% for blogs in bloglist %}
-        <li><a href="/blog/entry/{{ blogs.id }}/">{{ blogs.entry_title }}</a></li>
+        <li><a href="/blog-entry/{{ blogs.id }}/">{{ blogs.entry_title }}</a></li>
     {% endfor %}
     </ul>
 {% else %}

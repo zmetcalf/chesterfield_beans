@@ -5,6 +5,7 @@ from blog.models import BlogInfo, BlogEntry
 
 class BlogInfoAdmin(admin.ModelAdmin):
     list_display = ('title', 'tagline')
+    prepopulated_fields = {"url_slug": ("title",)}
 
 class BlogEntryAdmin(admin.ModelAdmin):
     list_display = ('entry_title', 'entry_post_date')

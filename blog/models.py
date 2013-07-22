@@ -1,11 +1,10 @@
 from django.contrib.auth.models import User
 from django.db import models
 
-# Create your models here.
 class BlogInfo(models.Model):
     title = models.CharField(max_length=200)
     tagline = models.CharField(max_length=200)
-    # Add blog id - http address safe
+    url_slug = models.CharField(max_length=80)
     
     def __unicode__(self):
         return self.title
