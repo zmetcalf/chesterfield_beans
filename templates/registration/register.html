@@ -1,0 +1,12 @@
+{% include 'header.html' with title="Site Registration" %} 
+<div id="content">
+  <div id="site-registration">
+    <h1>Create an account</h1>
+      <form action="" method="post">
+          {{ form.as_p }}
+          <input type="submit" value="Create the account">
+          {% csrf_token %}
+      </form>
+  </div>
+</div>
+{% include 'footer.html' %}

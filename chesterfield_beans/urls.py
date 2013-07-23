@@ -1,9 +1,11 @@
 from django.conf.urls import patterns, include, url
+from django.contrib import admin
+from django.contrib.auth.views import login, logout
 
 from blog.views import show_blogroll, show_blog_entry
 from cms.views import get_page, get_home
-# Uncomment the next two lines to enable the admin:
-from django.contrib import admin
+from site_management.views import register
+
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -20,6 +22,9 @@ urlpatterns = patterns('',
     url(r'^blog/(?P<slug>[a-zA-Z0-9_.-]+)/$', show_blogroll, name='blog'),
     url(r'^blog-entry/(?P<entry_id>\d+)/$', show_blog_entry,
         name='blog_entry'),
+    (r'^accounts/login/$',  login),
+    (r'^accounts/logout/$', logout),
+    url(r'^register/$', register, name='registration'),
     url(r'^$', get_home, name='home'), # Add/remove $ after ^ if 404 instead of homepage
     (r'^comments/', include('django.contrib.comments.urls')),
 )

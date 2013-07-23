@@ -21,11 +21,26 @@ header {
     margin: 0 2%;
 }
 
+#content {
+    float:left;
+    width:70%;
+    margin:.25%;
+
+}
+
 aside {
     float:left;
     margin:1%;
     padding: 1% 2%;
     background-color: white;
     width:20%;
+    box-shadow: 10px 10px 5px #201F1F;
+}
+
+#site-registration {
+    font-family: "Tahoma";
+    margin: 3%;
+    padding: 1% 2%;
+    background-color: white;
     box-shadow: 10px 10px 5px #201F1F;
 }
