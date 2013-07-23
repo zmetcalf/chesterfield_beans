@@ -3,7 +3,7 @@
 <h4>Recent Pages</h4>
     <ul>
     {% for content in latest_content_list %}
-        <li><a href="/cms/{{ content.id }}/">{{ content.title }}</a></li>
+        <li><a href="/page/{{ content.url_slug }}/">{{ content.title }}</a></li>
     {% endfor %}
     </ul>
 {%elif bloglist %}

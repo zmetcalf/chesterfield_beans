@@ -1,6 +1,7 @@
+{% load sidebar %}
 {% if content.sidebar_right %}
     <!-- Import Sidebar Right -->
-    {% include "sidebar.html" %}
+    {% get_recent 5 %}
 {% endif %}
 
 <footer>
