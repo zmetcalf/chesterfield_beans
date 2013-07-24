@@ -48,7 +48,8 @@ hgroup {
 }
 
 aside {
-
+    font-family:Tahoma;
+    font-size:14px;
     float:left;
     margin:1%;
     padding: 1% 2%;
@@ -60,7 +61,16 @@ aside {
 #site-registration {
     font-family: "Tahoma";
     margin: 3%;
-    padding: 1% 2%;
+    padding: 4%;
     background-color: white;
     box-shadow: 10px 10px 5px #201F1F;
+}
+
+footer {
+    overflow:hidden;
+    width:80%;
+}
+#copyright {
+    float:left;
+    margin:5%;
 }

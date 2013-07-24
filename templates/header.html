@@ -28,19 +28,7 @@
         {% if user.is_authenticated %}
             <a href="{{ '/accounts/logout' }}">Logout</a>
         {% else %}
-        {% if form.errors %}
-            <p class="error">Invalid username or password</p>
-        {% endif %}
-            <form action="" method="post">
-                <label for="username">User name:</label>
-                <input type="text" name="username" value="" id="username">
-                <label for="password">Password:</label>
-                <input type="password" name="password" value="" id="password">
-            
-                <input type="submit" value="login" />
-                <input type="hidden" name="next" value="{{ next|default:'/' }}" />
-                {% csrf_token %}
-            </form>
+            <a href="{{ '/accounts/login' }}">Login</a> | <a href="{{ '/register' }}">Register</a>
         {% endif %}
     </div>
     {% include "menu-main.html" %}

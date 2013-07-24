@@ -1,3 +1,5 @@
+import datetime
+
 from django.shortcuts import render, get_object_or_404
 from django.template import Context, RequestContext
 
@@ -13,8 +15,10 @@ def show_blogroll(request, slug):
     return render(request, 'blog/blogroll.html', to_view, context_instance = 
                     RequestContext(request, processors=[context_processors]))
     
-def show_blog_entry(request, entry_id):
-    entry = get_object_or_404(BlogEntry, pk = entry_id)
+def show_blog_entry(request, year, month, day, slug):
+    entry = get_object_or_404(BlogEntry, 
+                                entry_post_date__contains=datetime.date(int(year),
+                                int(month), int(day)), entry_slug=slug)
     site_info = {'sidebar': 'left', 'entry': entry}
     return render(request, 'blog/entry.html', site_info, context_instance = 
                     RequestContext(request, processors=[context_processors]))

@@ -18,6 +18,7 @@ class BlogEntry(models.Model):
     author = models.ForeignKey(User, null=True, blank=True)
     seo_keywords = models.CharField(max_length=160, null=True, blank=True)
     seo_description = models.CharField(max_length=160, null=True, blank=True)
+    entry_slug = models.CharField(max_length=80)
     
     def __unicode__(self):
         return self.entry_title

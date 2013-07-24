@@ -9,6 +9,7 @@ class BlogInfoAdmin(admin.ModelAdmin):
 
 class BlogEntryAdmin(admin.ModelAdmin):
     list_display = ('entry_title', 'entry_post_date')
+    prepopulated_fields = {"entry_slug": ("entry_title",)}
     
     def save_model(self, request, obj, form, change):
         if getattr(obj, 'author', None) is None:
