@@ -6,6 +6,7 @@ body {
     margin: 0 auto;
     padding:10px 40px;
     max-width: 960px;
+    overflow:hidden;
 }
 
 header {
@@ -14,11 +15,28 @@ header {
     margin:1%;
     font-family: "Tahoma";
     box-shadow: 10px 10px 5px #201F1F;
+    overflow:hidden;
 }
 
+hgroup {
+    float:left;
+}
+
+#nav-top {
+    float:right;
+}
+
+#menu-main {
+    overflow:hidden;
+    float:left;
+    width:80%;
+}
 #nav-home {
     float:left;
     margin: 0 2%;
+}
+#page-wrapper {
+    overflow:hidden;
 }
 
 #content {
@@ -26,9 +44,11 @@ header {
     width:70%;
     margin:.25%;
 
+
 }
 
 aside {
+
     float:left;
     margin:1%;
     padding: 1% 2%;
