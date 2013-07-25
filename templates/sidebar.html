@@ -1,4 +1,4 @@
-<aside>
+{% load sidebar %}<aside>
 {% if latest_content_list %}
 <h4>Recent Pages</h4>
     <ul>
@@ -10,7 +10,7 @@
 <h4>Recent Blog Entries</h4>
     <ul>
     {% for blogs in bloglist %}
-        <li><a href="/{{blogs.entry_post_date|date:"Y" }}/{{blogs.entry_post_date|date:"m" }}/{{blogs.entry_post_date|date:"d" }}/{{ blogs.entry_slug }}/">{{ blogs.entry_title }}</a></li>
+        <li><a href="/{% print_blog_entry_link blogs %}">{{ blogs.entry_title }}</a></li>
     {% endfor %}
     </ul>
 {% else %}
