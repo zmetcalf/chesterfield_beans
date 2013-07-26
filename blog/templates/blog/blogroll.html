@@ -1,3 +1,4 @@
+{% load comments sidebar%}
 {% include 'header.html' with title=title meta_keywords=blogroll.seo_keywords meta_description=blogroll.seo_description %} 
 <div id="content">
 {% if blogroll %}
@@ -8,6 +9,7 @@
         <div id = "author-date">
             <div id="author">{{ blog_entry.author }}</div>
             <div id="date-time">{{ blog_entry.entry_post_date }}</div>
+            <div id="comment-count"><a href="/{% print_blog_entry_link blog_entry %}">Comments ({% get_comment_count for blog_entry as comment_count %}{{ comment_count }})</a></div>
         </div>
         </article>
     {% endfor %}

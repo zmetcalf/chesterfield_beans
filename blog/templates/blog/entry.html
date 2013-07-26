@@ -1,4 +1,4 @@
-{% load comments %}
+{% load comments sidebar %}
 {% include 'header.html' with title=entry.entry_title meta_keywords=entry.seo_keywords meta_description=entry.seo_description %} 
 <div id="content">
     <article>
@@ -9,6 +9,27 @@
             <div id="date-time">{{ entry.entry_post_date }}</div>
         </div>
     </article>
-    {% render_comment_list for entry %}
+    {% get_comment_count for entry as comment_count %}
+    {% if comment_count %}
+        {% render_comment_list for entry %}
+    {% endif %}
+    <div id="comment-form">
+        {% if user.is_authenticated %}
+            {% get_comment_form for entry as form %}
+            <form action="{% comment_form_target %}" method="POST">
+            {% csrf_token %}
+            {{ form.comment }}
+            {{ form.honeypot }}
+            {{ form.content_type }}
+            {{ form.object_pk }}
+            {{ form.timestamp }}
+            {{ form.security_hash }}
+            <input type="hidden" name="next" value="/{% print_blog_entry_link entry %}" />
+            <input type="submit" value="Add comment" id="id_submit" />
+            </form>
+        {% else %}
+            <p>Please <a href="{{ '/accounts/login' }}">log in</a> to leave a comment.</p>
+        {% endif %}
+    </div>
 </div>
 {% include 'footer.html' %}

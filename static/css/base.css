@@ -1,5 +1,5 @@
 body {
-    background-color: #FF3333;
+    background-color: rgb(204, 0, 0);
 }
 
 #container {
@@ -43,8 +43,6 @@ hgroup {
     float:left;
     width:70%;
     margin:.25%;
-
-
 }
 
 aside {
@@ -56,6 +54,25 @@ aside {
     background-color: white;
     width:20%;
     box-shadow: 10px 10px 5px #201F1F;
+}
+
+#comments {
+    background-color:white;
+    box-shadow: 10px 10px 5px #201F1F;
+    float:right;
+    width:60%;
+    padding:1% 2%;
+}
+#id_honeypot {
+    display: none;
+}
+#comment-form {
+    background-color:white;
+    box-shadow: 10px 10px 5px #201F1F;
+    float:right;
+    overflow:hidden;
+    width:50%;
+    padding:1% 2%;
 }
 
 #site-registration {
